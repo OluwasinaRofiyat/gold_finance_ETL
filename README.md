@@ -6,10 +6,6 @@ Gold_finance_ETL is a data engineering project designed to extract financial tim
 <img width="543" alt="image" src="https://github.com/user-attachments/assets/cdebe121-c817-4d53-a269-965f37ebaf37">
 
 
-# Data Pipeline Flow
-<img width="637" alt="image" src="https://github.com/user-attachments/assets/ce05d6e6-4cee-4453-b192-7c1b437e93e0">
-
-
 
 
 ## Data Source
@@ -23,6 +19,11 @@ Frequency: Daily data refreshes
 ### PostgreSQL: Database to store raw and aggregated tables with custom stored procedures for financial analysis
 ### SQL: Used for creating tables, views, and procedures for data aggregation
 ### Python: Core language for scripting and data manipulation
+
+# Data Pipeline Flow
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/ce05d6e6-4cee-4453-b192-7c1b437e93e0">
+
+
 ## Pipeline Workflow
 Extract:
 Using extract.py, the pipeline fetches daily time series data from the Alpha Vantage API.
