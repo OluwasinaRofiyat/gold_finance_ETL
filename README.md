@@ -2,9 +2,11 @@
 Overview
 Gold_finance_ETL is a data engineering project designed to extract financial time series data from the Alpha Vantage API, transform it using PySpark, and load it into a PostgreSQL database. The pipeline is orchestrated with Apache Airflow, enabling automated and scheduled ETL tasks. Aggregated tables in PostgreSQL provide data for financial analysis, allowing users to generate insights into daily financial trends.
 
-
+# Solution Architecture
 <img width="543" alt="image" src="https://github.com/user-attachments/assets/cdebe121-c817-4d53-a269-965f37ebaf37">
 
+
+# Data Pipeline Flow
 <img width="637" alt="image" src="https://github.com/user-attachments/assets/ce05d6e6-4cee-4453-b192-7c1b437e93e0">
 
 
