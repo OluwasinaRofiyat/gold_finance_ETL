@@ -1,0 +1,93 @@
+[2024-12-25T08:13:38.809+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-25T08:13:38.833+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.transform_data_task manual__2024-12-25T08:13:00.099789+00:00 [queued]>
+[2024-12-25T08:13:38.847+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.transform_data_task manual__2024-12-25T08:13:00.099789+00:00 [queued]>
+[2024-12-25T08:13:38.847+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 3
+[2024-12-25T08:13:38.867+0000] {taskinstance.py:2889} INFO - Executing <Task(SparkSubmitOperator): transform_data_task> on 2024-12-25 08:13:00.099789+00:00
+[2024-12-25T08:13:38.875+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1694) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-25T08:13:38.877+0000] {standard_task_runner.py:72} INFO - Started process 1696 to run task
+[2024-12-25T08:13:38.878+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gold_finance_data_pipeline', 'transform_data_task', 'manual__2024-12-25T08:13:00.099789+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/Gold_finance_etl_dags.py', '--cfg-path', '/tmp/tmpucv3akrn']
+[2024-12-25T08:13:38.881+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask transform_data_task
+[2024-12-25T08:13:38.945+0000] {task_command.py:467} INFO - Running <TaskInstance: gold_finance_data_pipeline.transform_data_task manual__2024-12-25T08:13:00.099789+00:00 [running]> on host 3dbe838a1c54
+[2024-12-25T08:13:39.117+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gold_finance_data_pipeline' AIRFLOW_CTX_TASK_ID='transform_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-12-25T08:13:00.099789+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-25T08:13:00.099789+00:00'
+[2024-12-25T08:13:39.118+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-25T08:13:39.147+0000] {spark_submit.py:304} INFO - Could not load connection string spark_default, defaulting to yarn
+[2024-12-25T08:13:39.149+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master yarn --name arrow-spark --verbose /home/rita/Finance_ETL/myenv/dags/modules/transform.py
+[2024-12-25T08:13:39.216+0000] {spark_submit.py:634} INFO - /home/***/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-12-25T08:13:39.221+0000] {spark_submit.py:634} INFO - JAVA_HOME is not set
+[2024-12-25T08:13:39.244+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark --verbose /home/rita/Finance_ETL/myenv/dags/modules/transform.py. Error code is: 1.
+[2024-12-25T08:13:39.276+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=gold_finance_data_pipeline, task_id=transform_data_task, run_id=manual__2024-12-25T08:13:00.099789+00:00, execution_date=20241225T081300, start_date=20241225T081338, end_date=20241225T081339
+[2024-12-25T08:13:39.336+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-25T08:13:39.337+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 33 for task transform_data_task (Cannot execute: spark-submit --master yarn --name arrow-spark --verbose /home/rita/Finance_ETL/myenv/dags/modules/transform.py. Error code is: 1.; 1696)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark --verbose /home/rita/Finance_ETL/myenv/dags/modules/transform.py. Error code is: 1.
+[2024-12-25T08:13:39.415+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-25T08:13:39.445+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-25T08:13:39.449+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,19 @@
+[2024-12-24T18:49:59.083+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-24T18:49:59.126+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Gold_finance_ETL_pipeline.transform_alpha_vantage_data manual__2024-12-24T18:49:31.462353+00:00 [queued]>
+[2024-12-24T18:49:59.141+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Gold_finance_ETL_pipeline.transform_alpha_vantage_data manual__2024-12-24T18:49:31.462353+00:00 [queued]>
+[2024-12-24T18:49:59.141+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2024-12-24T18:49:59.163+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): transform_alpha_vantage_data> on 2024-12-24 18:49:31.462353+00:00
+[2024-12-24T18:49:59.172+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=508) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-24T18:49:59.174+0000] {standard_task_runner.py:72} INFO - Started process 510 to run task
+[2024-12-24T18:49:59.176+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Gold_finance_ETL_pipeline', 'transform_alpha_vantage_data', 'manual__2024-12-24T18:49:31.462353+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dags.py', '--cfg-path', '/tmp/tmpwgsrmqps']
+[2024-12-24T18:49:59.180+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask transform_alpha_vantage_data
+[2024-12-24T18:49:59.253+0000] {task_command.py:467} INFO - Running <TaskInstance: Gold_finance_ETL_pipeline.transform_alpha_vantage_data manual__2024-12-24T18:49:31.462353+00:00 [running]> on host 3dbe838a1c54
+[2024-12-24T18:49:59.357+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='myemail@domain.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Gold_finance_ETL_pipeline' AIRFLOW_CTX_TASK_ID='transform_alpha_vantage_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-24T18:49:31.462353+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-24T18:49:31.462353+00:00'
+[2024-12-24T18:49:59.359+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-24T18:49:59.445+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-24T18:49:59.463+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-24T18:49:59.463+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Gold_finance_ETL_pipeline, task_id=transform_alpha_vantage_data, run_id=manual__2024-12-24T18:49:31.462353+00:00, execution_date=20241224T184931, start_date=20241224T184959, end_date=20241224T184959
+[2024-12-24T18:49:59.510+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-24T18:49:59.526+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

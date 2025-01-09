@@ -1,0 +1,48 @@
+[2025-01-05T20:36:40.257+0000] {processor.py:186} INFO - Started process (PID=7011) to work on /opt/airflow/dags/modules/load.py
+[2025-01-05T20:36:40.259+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/load.py for tasks to queue
+[2025-01-05T20:36:40.274+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:36:40.261+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/load.py
+[2025-01-05T20:37:17.173+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:17.170+0000] {timeout.py:68} ERROR - Process timed out, PID: 7011
+[2025-01-05T20:37:19.673+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:17.173+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/modules/load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/modules/load.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 67, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 142, in <module>
+    from pandas.core.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 178, in <module>
+    from pandas.core.methods.describe import describe_ndframe
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/methods/describe.py", line 41, in <module>
+    from pandas.io.formats.format import format_percentiles
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/format.py", line 91, in <module>
+    from pandas.io.common import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 30, in <module>
+    import tarfile
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/modules/load.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#reducing-dag-complexity, PID: 7011
+[2025-01-05T20:37:20.188+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/load.py
+[2025-01-05T20:37:21.396+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/load.py took 39.145 seconds
+[2025-01-05T20:37:53.698+0000] {processor.py:186} INFO - Started process (PID=7031) to work on /opt/airflow/dags/modules/load.py
+[2025-01-05T20:37:53.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/load.py for tasks to queue
+[2025-01-05T20:37:53.848+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:53.847+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/load.py
+[2025-01-05T20:38:01.384+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/load.py
+[2025-01-05T20:38:01.902+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/load.py took 8.279 seconds
+[2025-01-05T23:38:12.865+0000] {processor.py:186} INFO - Started process (PID=7038) to work on /opt/airflow/dags/modules/load.py
+[2025-01-05T23:38:12.879+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/load.py for tasks to queue
+[2025-01-05T23:38:12.991+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:12.990+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/load.py
+[2025-01-05T23:38:37.071+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/load.py
+[2025-01-06T19:46:45.720+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/load.py took 33.667 seconds

@@ -1,0 +1,16 @@
+[2025-01-05T20:37:22.914+0000] {processor.py:186} INFO - Started process (PID=7021) to work on /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T20:37:22.915+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finance_etl_dags.py for tasks to queue
+[2025-01-05T20:37:22.929+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:22.928+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T20:37:37.660+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:37.578+0000] {base.py:84} INFO - Retrieving connection 'on_prem_postgres'
+[2025-01-05T20:37:38.025+0000] {processor.py:925} INFO - DAG(s) 'Gold_finance_ETL_pipeline' retrieved from /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T20:37:40.633+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:40.632+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-05T20:37:41.041+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:41.040+0000] {dag.py:4180} INFO - Setting next_dagrun for Gold_finance_ETL_pipeline to None, run_after=None
+[2025-01-05T20:37:49.209+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finance_etl_dags.py took 24.218 seconds
+[2025-01-05T23:38:09.774+0000] {processor.py:186} INFO - Started process (PID=7035) to work on /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T23:38:09.788+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finance_etl_dags.py for tasks to queue
+[2025-01-05T23:38:09.792+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:09.791+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T23:38:24.022+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:24.020+0000] {base.py:84} INFO - Retrieving connection 'on_prem_postgres'
+[2025-01-05T23:38:24.541+0000] {processor.py:925} INFO - DAG(s) 'Gold_finance_ETL_pipeline' retrieved from /opt/airflow/dags/finance_etl_dags.py
+[2025-01-05T23:38:25.073+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:25.072+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-05T23:38:25.421+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:25.420+0000] {dag.py:4180} INFO - Setting next_dagrun for Gold_finance_ETL_pipeline to None, run_after=None
+[2025-01-05T23:38:25.613+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finance_etl_dags.py took 16.121 seconds
