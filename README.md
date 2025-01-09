@@ -7,6 +7,7 @@ Gold_finance_ETL is a data engineering project designed to extract financial tim
 ![Gold_Fintech_erd-solution_architecture](https://github.com/user-attachments/assets/2033419d-5587-43ac-905d-3a3899f2b42d)
 
 
+![image](https://github.com/user-attachments/assets/97a4eb8f-85e3-4075-aa55-e2e055ca8584)
 
 
 ## Data Source
