@@ -1,0 +1,58 @@
+[2025-01-05T20:36:40.871+0000] {processor.py:186} INFO - Started process (PID=7012) to work on /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:36:41.024+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Gold_finance_etl_dags.py for tasks to queue
+[2025-01-05T20:36:41.026+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:36:41.026+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:37:14.626+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:13.597+0000] {timeout.py:68} ERROR - Process timed out, PID: 7012
+[2025-01-05T20:37:15.925+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:14.627+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Gold_finance_etl_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Gold_finance_etl_dags.py", line 9, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 28, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/arrow/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/arrow/array.py", line 52, in <module>
+    from pandas.core.arrays._arrow_string_mixins import ArrowStringArrayMixin
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/_arrow_string_mixins.py", line 11, in <module>
+    import pyarrow.compute as pc
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 336, in <module>
+    _make_global_functions()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 333, in _make_global_functions
+    g[cpp_name] = g[name] = _wrap_function(name, func)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 304, in _wrap_function
+    return _decorate_compute_function(wrapper, name, func, options_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 153, in _decorate_compute_function
+    doc_pieces.append(dedent("""\
+                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/textwrap.py", line 466, in dedent
+    text = re.sub(r'(?m)^' + margin, '', text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/__init__.py", line 186, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/Gold_finance_etl_dags.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#reducing-dag-complexity, PID: 7012
+[2025-01-05T20:37:15.928+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:37:20.598+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Gold_finance_etl_dags.py took 37.438 seconds
+[2025-01-05T20:37:53.853+0000] {processor.py:186} INFO - Started process (PID=7030) to work on /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:37:53.943+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Gold_finance_etl_dags.py for tasks to queue
+[2025-01-05T20:37:53.946+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:53.945+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:38:01.437+0000] {processor.py:925} INFO - DAG(s) 'gold_finance_data_pipeline' retrieved from /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T20:38:03.872+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:38:03.871+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-05T20:38:04.159+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:38:04.158+0000] {dag.py:4180} INFO - Setting next_dagrun for gold_finance_data_pipeline to None, run_after=None
+[2025-01-05T23:38:40.583+0000] {processor.py:186} INFO - Started process (PID=7046) to work on /opt/airflow/dags/Gold_finance_etl_dags.py
+[2025-01-05T23:38:43.794+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Gold_finance_etl_dags.py for tasks to queue
+[2025-01-05T23:38:43.815+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:43.796+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Gold_finance_etl_dags.py

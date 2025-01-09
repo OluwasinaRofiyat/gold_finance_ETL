@@ -1,0 +1,21 @@
+[2024-12-25T20:54:49.601+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-25T20:54:49.634+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.api_test_task manual__2024-12-25T20:54:45.141883+00:00 [queued]>
+[2024-12-25T20:54:49.647+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.api_test_task manual__2024-12-25T20:54:45.141883+00:00 [queued]>
+[2024-12-25T20:54:49.647+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2024-12-25T20:54:49.667+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): api_test_task> on 2024-12-25 20:54:45.141883+00:00
+[2024-12-25T20:54:49.676+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3727) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-25T20:54:49.683+0000] {standard_task_runner.py:72} INFO - Started process 3729 to run task
+[2024-12-25T20:54:49.682+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gold_finance_data_pipeline', 'api_test_task', 'manual__2024-12-25T20:54:45.141883+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/Gold_finance_etl_dags.py', '--cfg-path', '/tmp/tmpvvru486d']
+[2024-12-25T20:54:49.688+0000] {standard_task_runner.py:105} INFO - Job 48: Subtask api_test_task
+[2024-12-25T20:54:49.775+0000] {task_command.py:467} INFO - Running <TaskInstance: gold_finance_data_pipeline.api_test_task manual__2024-12-25T20:54:45.141883+00:00 [running]> on host 3dbe838a1c54
+[2024-12-25T20:54:49.920+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gold_finance_data_pipeline' AIRFLOW_CTX_TASK_ID='api_test_task' AIRFLOW_CTX_EXECUTION_DATE='2024-12-25T20:54:45.141883+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-25T20:54:45.141883+00:00'
+[2024-12-25T20:54:49.922+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-25T20:54:50.900+0000] {logging_mixin.py:190} INFO - API Response for IBM: Data fetched successfully.
+[2024-12-25T20:54:50.903+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-25T20:54:50.919+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-25T20:54:50.919+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=gold_finance_data_pipeline, task_id=api_test_task, run_id=manual__2024-12-25T20:54:45.141883+00:00, execution_date=20241225T205445, start_date=20241225T205449, end_date=20241225T205450
+[2024-12-25T20:54:51.031+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-25T20:54:51.087+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-25T20:54:51.092+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

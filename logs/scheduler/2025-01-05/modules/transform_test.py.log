@@ -1,0 +1,15 @@
+[2025-01-05T20:37:24.000+0000] {processor.py:186} INFO - Started process (PID=7023) to work on /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:37:24.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/transform_test.py for tasks to queue
+[2025-01-05T20:37:24.032+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:37:24.027+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:37:28.291+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:37:28.712+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/transform_test.py took 4.803 seconds
+[2025-01-05T20:38:02.641+0000] {processor.py:186} INFO - Started process (PID=7034) to work on /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:38:02.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/transform_test.py for tasks to queue
+[2025-01-05T20:38:02.730+0000] {logging_mixin.py:190} INFO - [2025-01-05T20:38:02.729+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:38:04.352+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T20:38:04.906+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/transform_test.py took 2.622 seconds
+[2025-01-05T23:38:09.837+0000] {processor.py:186} INFO - Started process (PID=7036) to work on /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T23:38:09.850+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/modules/transform_test.py for tasks to queue
+[2025-01-05T23:38:09.853+0000] {logging_mixin.py:190} INFO - [2025-01-05T23:38:09.852+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T23:38:12.134+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/modules/transform_test.py
+[2025-01-05T23:38:12.379+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/modules/transform_test.py took 3.082 seconds

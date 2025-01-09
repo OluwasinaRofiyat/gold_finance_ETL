@@ -1,0 +1,46 @@
+[2025-01-02T21:29:43.174+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-02T21:29:43.200+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.pyspark_task manual__2025-01-02T21:29:16.634798+00:00 [queued]>
+[2025-01-02T21:29:43.214+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.pyspark_task manual__2025-01-02T21:29:16.634798+00:00 [queued]>
+[2025-01-02T21:29:43.215+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-01-02T21:29:43.238+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): pyspark_task> on 2025-01-02 21:29:16.634798+00:00
+[2025-01-02T21:29:43.249+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1703) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-02T21:29:43.252+0000] {standard_task_runner.py:72} INFO - Started process 1705 to run task
+[2025-01-02T21:29:43.257+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gold_finance_data_pipeline', 'pyspark_task', 'manual__2025-01-02T21:29:16.634798+00:00', '--job-id', '333', '--raw', '--subdir', 'DAGS_FOLDER/Gold_finance_etl_dags.py', '--cfg-path', '/tmp/tmpf7gthe39']
+[2025-01-02T21:29:43.262+0000] {standard_task_runner.py:105} INFO - Job 333: Subtask pyspark_task
+[2025-01-02T21:29:43.348+0000] {task_command.py:467} INFO - Running <TaskInstance: gold_finance_data_pipeline.pyspark_task manual__2025-01-02T21:29:16.634798+00:00 [running]> on host 77bcd09e75b5
+[2025-01-02T21:29:43.582+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gold_finance_data_pipeline' AIRFLOW_CTX_TASK_ID='pyspark_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-02T21:29:16.634798+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-02T21:29:16.634798+00:00'
+[2025-01-02T21:29:43.585+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-02T21:30:17.723+0000] {logging_mixin.py:190} INFO - Data successfully transformed and saved to /tmp/spark_output
+[2025-01-02T21:30:21.501+0000] {logging_mixin.py:190} INFO - +----------+----------+----------+---------+-----------+------------+--------------+-----------+----------+--------------------+--------+-------------------+
+|      date|daily_open|daily_high|daily_low|daily_close|daily_volume|last_refreshed|output_size| time_zone|         description|  symbol|       daily_return|
++----------+----------+----------+---------+-----------+------------+--------------+-----------+----------+--------------------+--------+-------------------+
+|2023-01-02|     61.96|     63.88|    61.89|      63.78|     1836012|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX|               NULL|
+|2023-01-03|     225.4|     230.2|    225.2|      229.0|    66772383|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|TSCO.LON|             165.22|
+|2023-01-03|     141.1|     141.9|   140.48|     141.55|     3338829|    2025-01-02|  Full size|US/Eastern|Daily Prices (ope...|     IBM| -87.44999999999999|
+|2023-01-03|      63.7|     64.94|    63.66|      64.05|     1630673|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX| -77.50000000000001|
+|2023-01-03|     48.79|     49.64|    47.21|      48.79|     4362800|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|SHOP.TRT|-15.259999999999998|
+|2023-01-04|     230.9|   235.608|    229.7|      235.0|    17376029|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|TSCO.LON|             186.21|
+|2023-01-04|    142.07|   143.615| 141.3675|      142.6|     3869236|    2025-01-02|  Full size|US/Eastern|Daily Prices (ope...|     IBM|              -92.4|
+|2023-01-04|      64.4|     66.11|     64.3|      65.86|     2715145|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX|             -76.74|
+|2023-01-04|     49.16|     50.91|    48.41|      50.61|     4293100|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|SHOP.TRT|             -15.25|
+|2023-01-05|     238.0|     240.3|    237.6|      238.5|    22298471|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|TSCO.LON|             187.89|
+|2023-01-05|    142.44|   142.498|   140.01|     141.11|     2866648|    2025-01-02|  Full size|US/Eastern|Daily Prices (ope...|     IBM| -97.38999999999999|
+|2023-01-05|     65.78|     66.66|    65.36|      66.41|     1793620|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX| -74.70000000000002|
+|2023-01-05|     49.37|      49.8|    47.91|      48.83|     4130200|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|SHOP.TRT|             -17.58|
+|2023-01-06|     240.0|     243.5|    238.1|      241.4|    16593631|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|TSCO.LON|             192.57|
+|2023-01-06|    142.38|    144.25|   141.58|      143.7|     3574042|    2025-01-02|  Full size|US/Eastern|Daily Prices (ope...|     IBM| -97.70000000000002|
+|2023-01-06|     66.63|     67.08|    64.95|      66.46|     2127422|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX|             -77.24|
+|2023-01-06|     48.89|     50.05|     47.4|      49.56|     3783000|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|SHOP.TRT| -16.89999999999999|
+|2023-01-09|     241.5|     245.0|    240.4|      243.2|    14214280|    2024-12-31|  Full size|US/Eastern|Daily Prices (ope...|TSCO.LON|             193.64|
+|2023-01-09|    144.08|    145.47|    143.4|     143.55|     3987782|    2025-01-02|  Full size|US/Eastern|Daily Prices (ope...|     IBM| -99.64999999999998|
+|2023-01-09|     67.11|      67.7|    66.89|      67.32|     2399636|    2024-12-30|  Full size|US/Eastern|Daily Prices (ope...| MBG.DEX| -76.23000000000002|
++----------+----------+----------+---------+-----------+------------+--------------+-----------+----------+--------------------+--------+-------------------+
+only showing top 20 rows
+[2025-01-02T21:30:21.502+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-02T21:30:21.523+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-02T21:30:21.523+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=gold_finance_data_pipeline, task_id=pyspark_task, run_id=manual__2025-01-02T21:29:16.634798+00:00, execution_date=20250102T212916, start_date=20250102T212943, end_date=20250102T213021
+[2025-01-02T21:30:21.586+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-02T21:30:21.644+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-02T21:30:21.656+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

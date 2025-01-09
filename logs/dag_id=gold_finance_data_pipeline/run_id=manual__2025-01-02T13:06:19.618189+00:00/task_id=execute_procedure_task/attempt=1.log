@@ -1,0 +1,22 @@
+[2025-01-02T13:07:04.078+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-02T13:07:04.103+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.execute_procedure_task manual__2025-01-02T13:06:19.618189+00:00 [queued]>
+[2025-01-02T13:07:04.119+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gold_finance_data_pipeline.execute_procedure_task manual__2025-01-02T13:06:19.618189+00:00 [queued]>
+[2025-01-02T13:07:04.120+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-01-02T13:07:04.141+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): execute_procedure_task> on 2025-01-02 13:06:19.618189+00:00
+[2025-01-02T13:07:04.160+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1716) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-02T13:07:04.163+0000] {standard_task_runner.py:72} INFO - Started process 1718 to run task
+[2025-01-02T13:07:04.164+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gold_finance_data_pipeline', 'execute_procedure_task', 'manual__2025-01-02T13:06:19.618189+00:00', '--job-id', '301', '--raw', '--subdir', 'DAGS_FOLDER/Gold_finance_etl_dags.py', '--cfg-path', '/tmp/tmp5ryal_4n']
+[2025-01-02T13:07:04.169+0000] {standard_task_runner.py:105} INFO - Job 301: Subtask execute_procedure_task
+[2025-01-02T13:07:04.242+0000] {task_command.py:467} INFO - Running <TaskInstance: gold_finance_data_pipeline.execute_procedure_task manual__2025-01-02T13:06:19.618189+00:00 [running]> on host 77bcd09e75b5
+[2025-01-02T13:07:04.367+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gold_finance_data_pipeline' AIRFLOW_CTX_TASK_ID='execute_procedure_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-02T13:06:19.618189+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-02T13:06:19.618189+00:00'
+[2025-01-02T13:07:04.369+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-02T13:07:04.401+0000] {base.py:84} INFO - Retrieving connection 'my_postgres_connection'
+[2025-01-02T13:07:04.591+0000] {logging_mixin.py:190} INFO - Procedure executed successfully.
+[2025-01-02T13:07:04.592+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-02T13:07:04.609+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-02T13:07:04.610+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=gold_finance_data_pipeline, task_id=execute_procedure_task, run_id=manual__2025-01-02T13:06:19.618189+00:00, execution_date=20250102T130619, start_date=20250102T130704, end_date=20250102T130704
+[2025-01-02T13:07:04.661+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-02T13:07:04.714+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-02T13:07:04.718+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
