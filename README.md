@@ -39,4 +39,18 @@ Aggregated tables are generated in PostgreSQL using stored procedures and SQL sc
 # ERD Schema
 ![Gold_Fintech_erd-erd](https://github.com/user-attachments/assets/be0381de-572c-4fa3-8bb5-0f192ad0af9e)
 
+# Deployed to Live Mode
 
+![image](https://github.com/user-attachments/assets/9ff7612f-3ec8-47d8-a08a-eb76a940cae8)
+
+
+~ How to Run
+Clone the Repository
+git clone https://github.com/OluwasinaRofiyat/gold_finance_ETL
+
+Set Environment Variables
+Fill in your configurations in .env/airflow.env etc.
+Build & Start Services
+
+  docker build .
+  docker compose up
