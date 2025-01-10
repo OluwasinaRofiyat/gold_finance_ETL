@@ -39,6 +39,10 @@ Aggregated tables are generated in PostgreSQL using stored procedures and SQL sc
 # ERD Schema
 ![Gold_Fintech_erd-erd](https://github.com/user-attachments/assets/be0381de-572c-4fa3-8bb5-0f192ad0af9e)
 
+# Error Handling in Azure Data Factory
+![image](https://github.com/user-attachments/assets/60d22b24-69dc-40d8-9e43-c67215126d2c)
+
+
 # Deployed to Live Mode
 
 ![image](https://github.com/user-attachments/assets/9ff7612f-3ec8-47d8-a08a-eb76a940cae8)
@@ -49,7 +53,7 @@ Aggregated tables are generated in PostgreSQL using stored procedures and SQL sc
 git clone https://github.com/OluwasinaRofiyat/gold_finance_ETL
 
 # Set Environment Variables
-Fill in your configurations in .env/airflow.env etc.
+Fill in your configurations in .env etc.
 # Build & Start Services
 
   docker build .  
