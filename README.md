@@ -44,13 +44,13 @@ Aggregated tables are generated in PostgreSQL using stored procedures and SQL sc
 ![image](https://github.com/user-attachments/assets/9ff7612f-3ec8-47d8-a08a-eb76a940cae8)
 
 
-~ How to Run
-Clone the Repository
+# How to Run
+## Clone the Repository
 git clone https://github.com/OluwasinaRofiyat/gold_finance_ETL
 
-Set Environment Variables
+# Set Environment Variables
 Fill in your configurations in .env/airflow.env etc.
-Build & Start Services
+# Build & Start Services
 
   docker build .
   docker compose up
