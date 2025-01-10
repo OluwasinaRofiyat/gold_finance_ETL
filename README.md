@@ -52,5 +52,5 @@ git clone https://github.com/OluwasinaRofiyat/gold_finance_ETL
 Fill in your configurations in .env/airflow.env etc.
 # Build & Start Services
 
-  docker build .
+  docker build .  
   docker compose up
